@@ -10,7 +10,7 @@ const { resolve } = require('path');
 module.exports = {
   PROJECT_NAME: require(resolve(__dirname, '../../package.json')).name,
   PATHS: {
-    COVERAGE_REPORT: resolve(__dirname, '../../coverage/lcov-report/index.html'),
+    COVERAGE_REPORT: resolve(__dirname, '../../.tests/coverage/lcov-report/index.html'),
     BABEL_CONFIG: resolve(__dirname, '../../babel.config.ts'),
     STORE: resolve(__dirname, '../../.tests/src/app/store'),
     TEMPLATES: resolve(__dirname, '../../src/templates'),

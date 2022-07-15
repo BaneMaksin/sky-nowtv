@@ -70,6 +70,16 @@ To run the Jest in debug mode, please run
 yarn test:debug
 ```
 
+To get the unit tests coverage
+```
+yarn test:coverage
+```
+
+To open the unit tests coverage report
+```
+yarn test:coverage:report
+```
+
 ## Cypress
 
 To open the Cypress dashboard and run E2E tests, please run

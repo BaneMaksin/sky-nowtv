@@ -27,6 +27,7 @@
     "test:debug": "node bin/tests.js --no-cache --verbose",
     "test:debug:delete": "node bin/tests.js --no-cache --verbose --delete",
     "test:coverage": "node bin/tests.js --coverage",
+    "test:coverage:report": "node bin/tests.js --open-report",
     "test:update:snapshot": "node bin/tests.js --updateSnapshot",
     "cy:open": "cypress open --browser electron",
     "cy:headless": "cypress run --headless --browser electron",
