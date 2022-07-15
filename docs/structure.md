@@ -4,7 +4,6 @@ Structure of the web application can be found below:
 
 * **.tests** compiled tests files ahead of time
 * **bin** executable binaries that can be used for publishing
-* **coverage** unit test coverage report
 * **cypress** Cypress support directory
 * **dist** distributable / ci builds
 * **docs** documentation
