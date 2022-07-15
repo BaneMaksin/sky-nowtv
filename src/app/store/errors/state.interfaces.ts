@@ -5,5 +5,5 @@
 
 // General errors state
 export interface ErrorsState {
-  errors: string[];
+  errors: Partial<Error>[];
 }

@@ -13,7 +13,7 @@ import { MessagesState } from '../state.interfaces';
  * @param state - Store state.
  * @param action - Reducer payload action.
  */
-export const failMessages = (state: MessagesState, action: PayloadAction<string>): void => {
+export const failMessages = (state: MessagesState, action: PayloadAction<Error>): void => {
   state.error = action.payload;
   state.isLoading = false;
 };

@@ -24,26 +24,24 @@ export function Errors({ errors }: ErrorsProps): JSX.Element {
 
   // Render the view
   return mappedErrors?.length ? (
-    <aside>
-      <div className={style.section}>
-        <div className={style.title}>
-          Errors
-        </div>
-
-        <ul>
-          {Children.toArray(mappedErrors.map(mappedError => (
-            <li>
-              <div className={style.products}>
-                Error
-              </div>
-
-              <span className={style.status}>
-                {mappedError}
-              </span>
-            </li>
-          )))}
-        </ul>
+    <aside className={style.section}>
+      <div className={style.title}>
+        Errors
       </div>
+
+      <ul>
+        {Children.toArray(mappedErrors.map(({ message }) => (
+          <li>
+            <div className={style.products}>
+              Error
+            </div>
+
+            <span className={style.status}>
+              {message}
+            </span>
+          </li>
+        )))}
+      </ul>
     </aside>
   ) : null;
 }

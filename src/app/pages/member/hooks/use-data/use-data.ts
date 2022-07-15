@@ -48,16 +48,16 @@ export const useStoreData = (
 
     // Check for valid members data
     if (member && isPlainObject(member) && !Object.values(member).length) {
-      dispatch(actions.updateErrors([
-        'Member data are not valid!'
-      ]));
+      dispatch(actions.updateErrors([{
+        message: 'Member data are not valid!'
+      }]));
     }
 
     // Check for valid messages
     if (messages && Array.isArray(messages) && !messages.length) {
-      dispatch(actions.updateErrors([
-        'Missing messages data!'
-      ]));
+      dispatch(actions.updateErrors([{
+        message: 'Missing messages data!'
+      }]));
     }
   }, [
     isMessagesLoading,

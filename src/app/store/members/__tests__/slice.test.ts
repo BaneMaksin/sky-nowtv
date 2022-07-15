@@ -38,7 +38,7 @@ jest.mock('../../helpers/resolve-reducers', () => ({
 describe('Store members slice', () => {
 
   // Store instance
-  let store: EnhancedStore<unknown, AnyAction, [ThunkMiddlewareFor<unknown>]>;
+  let store: EnhancedStore<Partial<MembersState>, AnyAction, [ThunkMiddlewareFor<MembersState>]>;
 
   // Configure the store before each test
   beforeEach(() => {
@@ -87,7 +87,8 @@ describe('Store members slice', () => {
 
   it('should return dispatched members fail action payload', () => {
     const { getInitialState, actions: { failMembers } } = membersSlice;
-    const mockedError = 'Foo Bar';
+    const { message } = new Error('Foo Bar');
+    const mockedError = { message };
 
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());

@@ -13,6 +13,9 @@ import { ErrorsState } from '../state.interfaces';
  * @param state - Store state.
  * @param action - Reducer payload action.
  */
-export const updateErrors = (state: ErrorsState, action: PayloadAction<string[]>): void => {
-  state.errors = action.payload;
+export const updateErrors = (state: ErrorsState, action: PayloadAction<Partial<Error>[]>): void => {
+  state.errors = [
+    ...state.errors,
+    ...action.payload
+  ];
 };

@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Member page component should render member page component 1`] = `
+<DocumentFragment>
+  <section>
+    <h1
+      class="title"
+    >
+      Member
+    </h1>
+    <header
+      class="header"
+    >
+      <div
+        class="context"
+      >
+        <h2
+          class="title"
+        >
+          Martin Bradley
+        </h2>
+        <div
+          class="text"
+          data-testid="member-email"
+        >
+          <a
+            href="mailto: mbradley0@google.it"
+          >
+            mbradley0@google.it
+          </a>
+        </div>
+      </div>
+      <img
+        alt="Martin Bradley"
+        class="image"
+        data-testid="member-image"
+        src="http://dummyimage.com/100x100.png/5fa2dd/ffffff"
+      />
+    </header>
+    <h3
+      class="title"
+    >
+      Messages
+    </h3>
+    <div
+      class="wrapper"
+    >
+      <div
+        class="card"
+        data-testid="member-message"
+      >
+        <div
+          class="message"
+        >
+          <p
+            class="text"
+          >
+            Cras in purus eu magna vulputate luctus.
+          </p>
+        </div>
+        <div
+          class="author"
+        >
+          <small
+            class="date"
+          >
+            26th Jan 2017 7:53
+          </small>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="member-message"
+      >
+        <div
+          class="message"
+        >
+          <p
+            class="text"
+          >
+            Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.
+          </p>
+        </div>
+        <div
+          class="author"
+        >
+          <small
+            class="date"
+          >
+            25th Mar 2016 23:01
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

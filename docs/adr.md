@@ -21,6 +21,8 @@ Webpack require context has been utilized to automatically import and render red
 
 Selectors hook pattern has been use across application.
 
+Redux Toolkit side effect middleware has been used for handling HTTP requests and manipulating actions.
+
 
 ## Code splitting
 Root routes are lazy loaded and webpack production build have additional instruction to optimise the bundles.
@@ -53,6 +55,18 @@ Cypress has been used for E2E testing of pages and content.
 Service worker has been utilised to intercept the HTTP request and return mocked data.
 
 Please bear in mind that service workers will only work under localhost hostname and under SSL certificate.
+
+
+## Dependencies
+`connected-react-router` package has been removed since the package is not maintained anymore.
+
+`redux-thunk` package has been also removed in favor of side effects.
+
+`serve` package has been removed in favor of native HTTP server.
+
+`enzyme` has been removed in favor of `testing-library`.
+
+`prettier` has been removed in favour of more strict and robust custom ESLint rules.
 
 ---
 

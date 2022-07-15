@@ -20,6 +20,6 @@ export interface MappedMembers {
 // Members state
 export interface MembersState {
   mappedDataById: MappedMembers;
+  error: Partial<Error>;
   isLoading: boolean;
-  error: string;
 }

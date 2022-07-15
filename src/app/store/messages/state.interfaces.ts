@@ -27,6 +27,6 @@ export interface MappedMessage extends ResponseMessageCore {
 // Messages store state
 export interface MessagesState {
   messagesDescDate: MappedMessage[];
+  error: Partial<Error>;
   isLoading: boolean;
-  error: string;
 }

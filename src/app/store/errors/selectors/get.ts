@@ -11,6 +11,6 @@ import { errorsSlice } from '../slice';
  *
  * @param state - Store state.
  */
-export const getErrors = (state: Record<string, ErrorsState>): string[] => (
+export const getErrors = (state: Record<string, ErrorsState>): Partial<Error>[] => (
   state[errorsSlice.name].errors
 );

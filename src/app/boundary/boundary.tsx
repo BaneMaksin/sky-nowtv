@@ -41,7 +41,7 @@ export class Boundary extends Component<BoundaryProps, BoundaryState> {
     const { children } = this.props;
 
     return hasError ? (
-      <Errors errors={[error.message]} />
+      <Errors errors={[error]} />
     ) : children;
   }
 }

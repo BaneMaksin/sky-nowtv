@@ -37,9 +37,12 @@ export async function getMembersEffect(
 
     // Dispatch success action with mapped response data
     listenerApi.dispatch(successMembers(mappedData));
-  } catch (error) {
+  } catch ({ message, stack }) {
 
     // Dispatch fail action
-    listenerApi.dispatch(failMembers(error));
+    listenerApi.dispatch(failMembers({
+      message,
+      stack
+    }));
   }
 }

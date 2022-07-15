@@ -40,9 +40,12 @@ export async function getMessagesEffect(
 
     // Dispatch success action with sorted response data
     listenerApi.dispatch(successMessages(sortedData));
-  } catch (error) {
+  } catch ({ message, stack }) {
 
     // Dispatch fail action
-    listenerApi.dispatch(failMessages(error));
+    listenerApi.dispatch(failMessages({
+      message,
+      stack
+    }));
   }
 }

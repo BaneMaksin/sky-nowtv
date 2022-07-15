@@ -27,9 +27,9 @@ export const useCheckMemberId = (memberId: string): boolean => {
   // Dispatch the error if member ID is not valid
   useEffect(() => {
     if (!memoizedIsMemberIdValid) {
-      dispatch(actions.updateErrors([
-        'Invalid member ID'
-      ]));
+      dispatch(actions.updateErrors([{
+        message: 'Invalid member ID'
+      }]));
     }
   }, [dispatch, memoizedIsMemberIdValid]);
 

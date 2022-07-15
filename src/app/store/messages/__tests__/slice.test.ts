@@ -39,7 +39,7 @@ jest.mock('../../helpers/resolve-reducers', () => ({
 describe('Store messages slice', () => {
 
   // Store instance
-  let store: EnhancedStore<unknown, AnyAction, [ThunkMiddlewareFor<unknown>]>;
+  let store: EnhancedStore<Partial<MessagesState>, AnyAction, [ThunkMiddlewareFor<MessagesState>]>;
 
   // Configure the store before each test
   beforeEach(() => {
@@ -57,7 +57,7 @@ describe('Store messages slice', () => {
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
 
-    // Dispatch the update errors action
+    // Dispatch the get messages action
     store.dispatch((<ActionCreatorWithoutPayload>getMessages)());
 
     // Verify that the store has been reduced by action payload
@@ -79,7 +79,7 @@ describe('Store messages slice', () => {
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
 
-    // Dispatch the update errors action
+    // Dispatch the success messages action
     store.dispatch(successMessages(sortedData));
 
     // Verify that the store has been reduced by action payload
@@ -91,12 +91,13 @@ describe('Store messages slice', () => {
 
   it('should return dispatched members fail action payload', () => {
     const { getInitialState, actions: { failMessages } } = messagesSlice;
-    const mockedError = 'Foo Bar';
+    const { message } = new Error('Foo Bar');
+    const mockedError = { message };
 
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
 
-    // Dispatch the update errors action
+    // Dispatch the fail message action
     store.dispatch(failMessages(mockedError));
 
     // Verify that the store has been reduced by action payload

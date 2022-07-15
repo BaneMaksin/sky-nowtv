@@ -6,6 +6,7 @@
 import { ThunkMiddlewareFor } from '@reduxjs/toolkit/src/getDefaultMiddleware';
 import { expect } from '@jest/globals';
 import {
+  ActionCreatorWithoutPayload,
   ValidateSliceCaseReducers,
   SliceCaseReducers,
   configureStore,
@@ -32,7 +33,7 @@ jest.mock('../../helpers/resolve-reducers', () => ({
 describe('Store error slice', () => {
 
   // Store instance
-  let store: EnhancedStore<unknown, AnyAction, [ThunkMiddlewareFor<unknown>]>;
+  let store: EnhancedStore<Partial<ErrorsState>, AnyAction, [ThunkMiddlewareFor<ErrorsState>]>;
 
   // Configure the store before each test
   beforeEach(() => {
@@ -44,9 +45,9 @@ describe('Store error slice', () => {
     store = null;
   });
 
-  it('should return dispatched errors update action payload', () => {
+  it('should find 1 dispatched error in the store state', () => {
     const { getInitialState, actions: { updateErrors } } = errorsSlice;
-    const mockPayload = ['Error 1', 'Error2'];
+    const mockPayload = [{ message: 'Foo' }];
 
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
@@ -55,9 +56,70 @@ describe('Store error slice', () => {
     store.dispatch(updateErrors(mockPayload));
 
     // Verify that the store has been reduced by action payload
+    expect(store.getState().errors).toHaveLength(1);
     expect(store.getState()).toEqual({
       ...<ErrorsState>getInitialState(),
       errors: mockPayload
     });
+  });
+
+  it('should find 2 dispatched errors in the store state', () => {
+    const { getInitialState, actions: { updateErrors } } = errorsSlice;
+    const mockPayload = [{ message: 'Foo' }, { message: 'Bar' }];
+
+    // Verify initial state
+    expect(store.getState()).toEqual(getInitialState());
+
+    // Dispatch the update errors action
+    store.dispatch(updateErrors(mockPayload));
+
+    // Verify that the store has been reduced by action payload
+    expect(store.getState().errors).toHaveLength(2);
+    expect(store.getState()).toEqual({
+      ...<ErrorsState>getInitialState(),
+      errors: mockPayload
+    });
+  });
+
+  it('should update existing store state errors', () => {
+    const { getInitialState, actions: { updateErrors } } = errorsSlice;
+    const mockPayload = [{ message: 'Foo' }];
+
+    // Verify initial state
+    expect(store.getState().errors).toHaveLength(0);
+    expect(store.getState()).toEqual(getInitialState());
+
+    // Dispatch the update errors action
+    store.dispatch(updateErrors(mockPayload));
+
+    // Verify that the store has been reduced by action payload
+    expect(store.getState().errors).toHaveLength(1);
+
+    // Dispatch the update errors action
+    store.dispatch(updateErrors(mockPayload));
+
+    // Verify that the store has been reduced by action payload
+    expect(store.getState().errors).toHaveLength(2);
+  });
+
+  it('should clear existing store state errors', () => {
+    const { getInitialState, actions: { updateErrors, clearErrors } } = errorsSlice;
+    const mockPayload = [{ message: 'Foo' }];
+
+    // Verify initial state
+    expect(store.getState().errors).toHaveLength(0);
+    expect(store.getState()).toEqual(getInitialState());
+
+    // Dispatch the update errors action
+    store.dispatch(updateErrors(mockPayload));
+
+    // Verify that the store has been reduced by action payload
+    expect(store.getState().errors).toHaveLength(1);
+
+    // Dispatch the update errors action
+    store.dispatch((<ActionCreatorWithoutPayload>clearErrors)());
+
+    // Verify that the store has been reduced by action payload
+    expect(store.getState().errors).toHaveLength(0);
   });
 });
