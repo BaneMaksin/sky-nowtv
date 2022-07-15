@@ -1,0 +1,62 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+.left {
+  border-right: 1px solid var(--border-color);
+  flex-basis: 240px;
+  flex-shrink: 0;
+  overflow: auto;
+  padding: 26px;
+  display: none;
+
+  @media screen and (min-width: 945px) {
+    flex-direction: column;
+    display: flex;
+  }
+}
+
+.side-wrapper {
+  & + .side-wrapper {
+    margin-top: 20px;
+  }
+
+  &:last-child {
+    margin-top: auto;
+  }
+}
+
+.side-title {
+  color: var(--inactive-color);
+  margin-bottom: 14px;
+}
+
+.side-section {
+  color: var(--theme-color);
+  flex-direction: column;
+  white-space: nowrap;
+  display: flex;
+}
+
+.link {
+  color: var(--theme-color);
+  text-decoration: none;
+  align-items: center;
+  border-radius: 6px;
+  font-weight: 400;
+  transition: 0.3s;
+  font-size: 14px;
+  display: flex;
+  padding: 10px;
+
+  &.is-active,
+  &:hover {
+    background-color: var(--hover-menu-bg);
+  }
+}
+
+.icon {
+  width: 16px;
+  margin-right: 8px;
+}

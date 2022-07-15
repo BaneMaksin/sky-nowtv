@@ -1,0 +1,48 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+.card {
+  border: 1px solid var(--theme-bg-color);
+  background-color: var(--content-bg);
+  flex-direction: column;
+  transition: 0.3s ease;
+  border-radius: 14px;
+  font-size: 16px;
+  display: flex;
+  padding: 20px;
+  height: 100%;
+
+  &:hover {
+    background-color: var(--theme-bg-color);
+    transform: scale(1.02);
+  }
+}
+
+.message {
+  align-items: flex-start;
+  margin-top: 16px;
+  display: flex;
+}
+
+.text {
+  padding-bottom: 16px;
+  position: relative;
+  line-height: 1.6em;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+}
+
+.author {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  margin-top: auto;
+  display: flex;
+}
+
+.date {
+  margin-left: auto;
+  text-align: right;
+}

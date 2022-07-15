@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shared grid component should render grid component without custom style class 1`] = `
+<DocumentFragment>
+  <div
+    class="wrapper"
+  >
+    Foo Bar
+  </div>
+</DocumentFragment>
+`;

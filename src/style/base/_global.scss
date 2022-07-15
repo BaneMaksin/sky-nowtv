@@ -1,0 +1,32 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  animation: animate-background 20s ease infinite;
+  font-family: var(--body-font);
+  background-size: 300% 300%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  padding: 0.8em;
+  background-image:
+    linear-gradient(
+      -45deg,
+      rgba(59 173 227 / 100%) 0%,
+      rgba(87 111 230 / 100%) 25%,
+      rgba(152 68 183 / 100%) 51%,
+      rgba(255 53 127 / 100%) 100%
+    );
+
+  @media screen and (min-width: 480px) {
+    padding: 2em;
+  }
+}

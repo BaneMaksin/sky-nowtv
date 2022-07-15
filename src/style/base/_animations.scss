@@ -1,0 +1,10 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+@keyframes animate-background {
+  0% { background-position: 0 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0 50% }
+}

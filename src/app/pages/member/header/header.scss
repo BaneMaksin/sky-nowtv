@@ -1,0 +1,74 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+.header {
+  justify-content: space-between;
+  background-repeat: repeat;
+  align-items: center;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  background-image:
+    url("assets/images/cubes.png"),
+    linear-gradient(
+      to right top,
+      #cf4af3,
+      #e73bd7,
+      #f631bc,
+      #fd31a2,
+      #ff3a8b,
+      #ff4b78,
+      #ff5e68,
+      #ff705c,
+      #ff8c51,
+      #ffaa49,
+      #ffc848,
+      #ffe652
+    );
+
+  @media screen and (min-width: 415px) {
+    padding: 20px 40px;
+  }
+}
+
+.context {
+  max-width: 350px;
+}
+
+.title {
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  margin: 0;
+}
+
+.text {
+  text-overflow: ellipsis;
+  line-height: 1.7em;
+  font-weight: 400;
+  margin-top: 16px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #ebecec;
+
+  a {
+    color: inherit;
+  }
+}
+
+.image {
+  object-position: center;
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 186px;
+  width: 110px;
+
+  @media screen and (min-width: 570px) {
+    width: auto;
+  }
+}

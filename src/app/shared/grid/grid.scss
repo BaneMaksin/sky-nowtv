@@ -1,0 +1,10 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(294px, auto));
+  grid-gap: 20px;
+  display: grid;
+}

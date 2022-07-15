@@ -1,0 +1,9 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+// Casting to a string
+@function to-string($value) {
+  @return inspect($value);
+}

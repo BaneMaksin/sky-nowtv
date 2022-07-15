@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shared copyright component should render copyright component without custom style class 1`] = `
+<DocumentFragment>
+  <small>
+    Copyright ©2022Sky UK
+  </small>
+</DocumentFragment>
+`;

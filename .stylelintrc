@@ -1,0 +1,45 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "indentation": 2,
+    "unit-allowed-list": [
+      "px",
+      "dpi",
+      "dppx",
+      "em",
+      "rem",
+      "s",
+      "%",
+      "deg",
+      "ms",
+      "vh",
+      "vw",
+      "fr",
+      "x"
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "if",
+          "each",
+          "include",
+          "mixin",
+          "for",
+          "return",
+          "rules",
+          "extend"
+        ]
+      }
+    ],
+    "value-keyword-case": null,
+    "no-eol-whitespace": null,
+    "no-descending-specificity": null,
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global", "local"] }],
+    "font-family-no-missing-generic-family-keyword": null,
+    "comment-whitespace-inside": null,
+    "declaration-block-trailing-semicolon": null,
+    "scss/double-slash-comment-empty-line-before": null
+  }
+}

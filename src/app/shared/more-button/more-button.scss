@@ -1,0 +1,21 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+.button {
+  background-color: #3a6df0;
+  border-radius: 20px;
+  white-space: nowrap;
+  padding: 16px 26px;
+  margin-top: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+
+  :hover {
+    background: #1e59f1;
+  }
+}

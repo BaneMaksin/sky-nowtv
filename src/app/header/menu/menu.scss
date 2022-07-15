@@ -1,0 +1,28 @@
+/*!
+ * Date: 7/15/22, 8:33 AM
+ * Copyright: Branislav Maksin (c) 2022
+ */
+
+.menu {
+  align-items: center;
+  display: flex;
+
+  @media screen and (min-width: 945px) {
+    display: none;
+  }
+}
+
+.link {
+  border-bottom: 2px solid transparent;
+  color: var(--inactive-color);
+  text-decoration: none;
+  padding: 18px 24px;
+  transition: 0.3s;
+
+  // States
+  &.is-active,
+  &:hover {
+    border-bottom: 2px solid var(--theme-color);
+    color: var(--theme-color);
+  }
+}

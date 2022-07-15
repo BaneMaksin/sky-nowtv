@@ -1,0 +1,53 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./build",
+    "sourceMap": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "emitDeclarationOnly": false,
+    "jsx": "react",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "types": [
+      "webpack-env",
+      "cypress",
+      "node",
+      "jest"
+    ],
+    "lib": [
+      "ES2020",
+      "dom"
+    ],
+    "paths": {
+      "@cypress": ["./cypress/integration"],
+      "@store/*": ["./src/app/store/*"],
+      "@shared": ["./src/app/shared"],
+      "@assets/*": ["./src/assets/*"],
+      "@store": ["./src/app/store"],
+      "@utils": ["./src/app/utils"],
+      "@app": ["./src/app"]
+    }
+  },
+  "include": [
+    "cypress/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.json"
+  ],
+  "exclude": [
+    "vendors",
+    ".cache"
+  ]
+}
