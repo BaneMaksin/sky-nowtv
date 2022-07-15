@@ -52,11 +52,11 @@ Please upload your solution to your github account as a public repository, and s
 
 ## Appendix
 
-1. [Getting started](docs/structure.md)
+1. [Application structure](docs/structure.md)
 1. [Architecture](docs/architecture.md)
 1. [Architecture decision records](docs/adr.md)
 1. [Dependencies](docs/dependencies.md)
-1. [NPM Scripts](docs/scripts.md)
+1. [NPM scripts](docs/scripts.md)
 1. [Browser support](docs/browser.md)
 1. [Task answers](docs/answers.md)
 

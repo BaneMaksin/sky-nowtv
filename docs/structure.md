@@ -30,7 +30,7 @@ Structure of the web application can be found below:
 * **src/assets** static assets ready for the deployment
 * **src/data** mocked data
 * **src/mocks** service worked providing mocked handlers
-* **src/style** main SASS preprocessor styles
+* **src/style** main global SASS preprocessor styles
 * **src/templates** HTML templates markups
 * **webpack** webpack environments configurations and plugins
 
