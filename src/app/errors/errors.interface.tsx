@@ -5,5 +5,5 @@
 
 // Errors component input properties
 export interface ErrorsProps {
-  errors?: Error[];
+  errors?: string[];
 }

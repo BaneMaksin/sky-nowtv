@@ -11,6 +11,6 @@ import { membersSlice } from '../slice';
  *
  * @param state - Store state.
  */
-export const getMembersError = (state: Record<string, MembersState>): Error => (
+export const getMembersError = (state: Record<string, MembersState>): string => (
   state[membersSlice.name].error
 );

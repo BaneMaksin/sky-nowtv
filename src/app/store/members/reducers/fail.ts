@@ -13,7 +13,7 @@ import { MembersState } from '../state.interfaces';
  * @param state - Store state.
  * @param action - Reducer payload action.
  */
-export const failMembers = (state: MembersState, action: PayloadAction<Error>): void => {
+export const failMembers = (state: MembersState, action: PayloadAction<string>): void => {
   state.error = action.payload;
   state.isLoading = false;
 };

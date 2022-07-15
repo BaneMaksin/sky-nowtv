@@ -3,7 +3,7 @@
  * Copyright: Branislav Maksin (c) 2022
  */
 
-import React from 'react';
+import React, { Children } from 'react';
 
 import { ErrorsProps } from './errors.interface';
 import { useErrors } from './hooks';
@@ -31,17 +31,17 @@ export function Errors({ errors }: ErrorsProps): JSX.Element {
         </div>
 
         <ul>
-          {mappedErrors.map(({ name, message }) => (
+          {Children.toArray(mappedErrors.map(mappedError => (
             <li>
               <div className={style.products}>
-                {name}
+                Error
               </div>
 
               <span className={style.status}>
-                {message}
+                {mappedError}
               </span>
             </li>
-          ))}
+          )))}
         </ul>
       </div>
     </aside>

@@ -47,7 +47,7 @@ const SOURCE_PATHS = [
 
 // Log that build will start
 if (!isCi) {
-  console.info('Building unit and integration tests', '\n');
+  console.info('Building unit tests', '\n');
 }
 
 // Transpile code base for Jest initialization

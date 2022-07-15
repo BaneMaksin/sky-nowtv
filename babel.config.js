@@ -14,6 +14,9 @@ const { PATHS } = require('./scripts/helpers/constants');
 // Export Babel configuration
 module.exports = api => {
 
+  // Check for custom build commonjs environment
+  const isBuildCJS = api.env('buildCJS');
+
   // Enable cache (same as api.cache.forever())
   api.cache(true);
 
@@ -31,6 +34,16 @@ module.exports = api => {
             removeImport: true
           }]
         ]
+      },
+      buildCJS: {
+        presets: [
+          'jest',
+          '@babel/preset-react'
+        ],
+        plugins: [
+          'transform-require-context',
+          ...(__dirname.includes('node_modules') ? [['module-resolver', { alias: {} }]] : [])
+        ]
       }
     },
     presets: [
@@ -45,7 +58,8 @@ module.exports = api => {
         'module-resolver',
         {
           alias: getAliases(
-            PATHS
+            PATHS,
+            isBuildCJS
           )
         }
       ]

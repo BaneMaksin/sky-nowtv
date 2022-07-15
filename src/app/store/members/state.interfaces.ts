@@ -21,5 +21,5 @@ export interface MappedMembers {
 export interface MembersState {
   mappedDataById: MappedMembers;
   isLoading: boolean;
-  error: Error;
+  error: string;
 }

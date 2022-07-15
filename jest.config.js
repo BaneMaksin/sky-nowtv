@@ -25,7 +25,10 @@ module.exports = {
 
   // Since node environment is significantly faster then JSDom,
   // in the future we should mock some of the DOM instances like window and document
-  testEnvironment: 'jsdom',
+  // testEnvironment: 'jsdom',
+  testEnvironment: '<rootDir>/setup/environment.js',
+  globalTeardown: '<rootDir>/setup/teardown.js',
+  globalSetup: '<rootDir>/setup/global.js',
 
   transform: {
     // '\\.(js|jsx|ts|tsx|js.flow)$': 'babel-jest'
@@ -51,7 +54,9 @@ module.exports = {
     '\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy'
   },
 
-  globals: {},
+  globals: {
+    STORE_REDUCERS_PATHS: {}
+  },
 
   // Jest v28.x
   fakeTimers: {

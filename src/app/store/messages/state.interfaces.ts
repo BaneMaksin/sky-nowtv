@@ -28,5 +28,5 @@ export interface MappedMessage extends ResponseMessageCore {
 export interface MessagesState {
   messagesDescDate: MappedMessage[];
   isLoading: boolean;
-  error: Error;
+  error: string;
 }

@@ -36,6 +36,7 @@
       "@assets/*": ["./src/assets/*"],
       "@store": ["./src/app/store"],
       "@utils": ["./src/app/utils"],
+      "@data/*": ["./src/data/*"],
       "@app": ["./src/app"]
     }
   },

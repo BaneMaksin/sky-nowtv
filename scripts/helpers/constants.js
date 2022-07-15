@@ -12,6 +12,7 @@ module.exports = {
   PATHS: {
     COVERAGE_REPORT: resolve(__dirname, '../../coverage/lcov-report/index.html'),
     BABEL_CONFIG: resolve(__dirname, '../../babel.config.ts'),
+    STORE: resolve(__dirname, '../../.tests/src/app/store'),
     TEMPLATES: resolve(__dirname, '../../src/templates'),
     TSCONFIG: resolve(__dirname, '../../tsconfig.json'),
     CYPRESS: resolve(__dirname, '../../cypress'),

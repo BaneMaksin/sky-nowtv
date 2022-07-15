@@ -13,7 +13,7 @@ import { selectors } from '@store';
  * @param customErrors - List of custom errors instances.
  * @returns List of errors.
  */
-export const useErrors = (customErrors: Error[] = []): Error[] => {
+export const useErrors = (customErrors: string[] = []): string[] => {
 
   // Get member error
   const messagesError = useSelector(selectors.getMembersError);

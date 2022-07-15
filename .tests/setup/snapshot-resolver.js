@@ -37,5 +37,5 @@ module.exports = {
     .slice(0, -snapshotExtension.length),
 
   // Example test path, used for preflight consistency check of the implementation above
-  testPathForConsistencyCheck: 'src/services/api/__tests__/api.test.js'
+  testPathForConsistencyCheck: 'src/app/shared/copyright/__tests__/copyright.test.js'
 };

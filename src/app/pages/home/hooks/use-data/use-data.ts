@@ -41,14 +41,14 @@ export const useStoreData = (chunk: number): HookStoreData => {
     // Check for valid members data
     if (members && isPlainObject(members) && !Object.values(members).length) {
       dispatch(actions.updateErrors([
-        new Error('Members data are not valid!')
+        'Members data are not valid!'
       ]));
     }
 
     // Check for valid messages
     if (messages && Array.isArray(messages) && !messages.length) {
       dispatch(actions.updateErrors([
-        new Error('Missing messages data!')
+        'Missing messages data!'
       ]));
     }
   }, [
