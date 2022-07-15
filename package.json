@@ -2,8 +2,7 @@
   "private": true,
   "homepage": "https://create-react-app-redux.now.sh",
   "engines": {
-    "node": ">=16.15.1 <17",
-    "npm": ">=8.11.0 <9"
+    "node": ">=16 <17"
   },
   "bin": {
     "sky-server": "bin/server.js",
@@ -11,7 +10,7 @@
   },
   "scripts": {
     "deploy": "now && now alias",
-    "start:static:server": "npm run build:prod && node bin/server.js",
+    "start:static:server": "yarn build:prod && node bin/server.js",
     "static:server": "node bin/server.js",
     "start": "webpack serve --env NODE_ENV=mocks",
     "build:prod": "webpack --env NODE_ENV=production --env MOCKS=true",
@@ -19,7 +18,7 @@
     "stylelint": "stylelint \"./src/**/*.{scss,less,css}\" --config ./.stylelintrc",
     "eslint": "eslint --ext .jsx,.js,.tsx,.ts,.mjs .",
     "tsclint": "tsc --project ./tsconfig.json --noEmit",
-    "lint": "npm run stylelint && npm run eslint && npm run tsclint",
+    "lint": "yarn stylelint && yarn eslint && yarn tsclint",
     "test": "node bin/tests.js",
     "test:watch": "node bin/tests.js --watch",
     "test:build": "node bin/tests.js --only-build",
@@ -87,6 +86,8 @@
     "pug": "^3.0.2",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
+    "schema-utils": "^4.0.0",
+    "semver": "^7.3.7",
     "start-server-and-test": "^1.14.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.9.1",

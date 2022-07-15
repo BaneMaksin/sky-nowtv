@@ -22,10 +22,13 @@ export const membersHandler = rest.get(
         context.status(200),
         context.json(membersMockedData)
       );
-    } catch (error) {
+    } catch ({ message, stack }) {
       return response(
         context.status(500),
-        context.json(error)
+        context.json({
+          message,
+          stack
+        })
       );
     }
   }
