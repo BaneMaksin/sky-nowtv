@@ -97,7 +97,7 @@ describe('Store messages slice', () => {
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
 
-    // Dispatch the fail message action
+    // Dispatch the fail messages action
     store.dispatch(failMessages(mockedError));
 
     // Verify that the store has been reduced by action payload

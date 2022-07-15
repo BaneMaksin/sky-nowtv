@@ -56,7 +56,7 @@ describe('Store members slice', () => {
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
 
-    // Dispatch the update errors action
+    // Dispatch the get members action
     store.dispatch((<ActionCreatorWithoutPayload>getMembers)());
 
     // Verify that the store has been reduced by action payload
@@ -75,7 +75,7 @@ describe('Store members slice', () => {
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
 
-    // Dispatch the update errors action
+    // Dispatch the members success action
     store.dispatch(successMembers(mappedData));
 
     // Verify that the store has been reduced by action payload
@@ -93,7 +93,7 @@ describe('Store members slice', () => {
     // Verify initial state
     expect(store.getState()).toEqual(getInitialState());
 
-    // Dispatch the update errors action
+    // Dispatch the members fail action
     store.dispatch(failMembers(mockedError));
 
     // Verify that the store has been reduced by action payload

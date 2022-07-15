@@ -116,7 +116,7 @@ describe('Store error slice', () => {
     // Verify that the store has been reduced by action payload
     expect(store.getState().errors).toHaveLength(1);
 
-    // Dispatch the update errors action
+    // Dispatch the clear errors action
     store.dispatch((<ActionCreatorWithoutPayload>clearErrors)());
 
     // Verify that the store has been reduced by action payload
